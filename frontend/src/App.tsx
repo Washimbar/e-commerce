@@ -1,8 +1,11 @@
 import React from 'react'
+import AllTodos from './components/AllTodos';
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <AllTodos />
+    </div>
   )
 }
 
