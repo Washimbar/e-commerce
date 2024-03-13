@@ -7,13 +7,13 @@ const AllTodos = () => {
 	const { loading, data, error } = useSelector((state) => state.api);
 	useEffect(() => {
 		dispatch(fetchData());
-  }, [dispatch]);
-  if (loading) {
-    return <div>Loading ...</div>
-  }
-    if (error) {
-			return <div>Error : {error}</div>;
-		}
+	}, [dispatch]);
+	if (loading) {
+		return <div>Loading ...</div>;
+	}
+	if (error) {
+		return <div>Error : {error}</div>;
+	}
 	return (
 		<div>
 			<h1>All Todos</h1>
