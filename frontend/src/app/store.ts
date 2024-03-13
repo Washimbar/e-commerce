@@ -1,14 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cakeSlice from '../features/cake/cakeSlice';
-// import userSlice from "../features/user/userSlice";
+import { apiReducer } from "./../features/api/apiSlice";
 
 const store = configureStore({
-    reducer: {
-        cake: cakeSlice,
-        // user: userSlice,
-    }
-})
+	reducer: {
+		api: apiReducer,
+	},
+});
 
 export default store;
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
